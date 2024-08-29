@@ -34,14 +34,12 @@ We trained the model using the highQ dataset and NewCough Dataset. These two dat
 --Test: 490 (different from validation)
 ```
 ## Data Preprocessing
-Step 1. Process the WAV audio files in the dataset, convert them into Mel spectrograms, and generate the corresponding COCO format annotation files. 
+**Step 1.** Process the WAV audio files in the dataset, convert them into Mel spectrograms, and generate the corresponding COCO format annotation files. 
 
 Note: The original audio files are annotated with the start and end points of the cough sounds, so the annotation information for each audio file should be in pairs. However, some audio files have the issue where `true_start_end_points` are not in pairs. Our code has detected and removed these files.
 `python3 audio2image.py`
 
-Step 2. 
-
-Step 3. Divide the dataset into training, testing, and validation sets.
+**Step 2.** Divide the dataset into training, testing, and validation sets.
 Division rule: Ensure that audio from the same patient is not assigned to different groups.
 `divide_dataset.ipynb`
 
