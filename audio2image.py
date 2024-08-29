@@ -15,7 +15,7 @@ def readMarkers(filePath):
     elif audioType == 'mp3':
         cue_lst = readMP3Markers(filePath)
     else:
-        raise Exception("音频格式不支持！")
+        raise Exception("The audio format is not supported!")
 
     return cue_lst
 
@@ -132,6 +132,7 @@ def generate_melspectrogram_and_annotation(filePath, savePath, annotations, imag
     return annotations, annotation_id
 
 if __name__ == '__main__':
+    #pls replace this root with your own dataset root
     data_root = "/home/jovyan/work/MusicYOLO/data4retrain/train/subdir32"
     melspec_save_path = "/home/jovyan/work/MusicYOLO/mmmel/train32"
     os.makedirs(melspec_save_path, exist_ok=True)
