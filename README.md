@@ -1,7 +1,7 @@
 # CoughYOLO-Detection
 Detection and identification of cough onset points based on [MusicYOLO](https://github.com/xk-wang/MusicYOLO/tree/main). We trained and evaluated the model on the highQ dataset and NewCough dataset.
 
-## Clone the repo:
+## Clone the Repo
 `git clone https://github.com/wailywang/CoughYOLO-Detection.git`
 
 ## Installation
@@ -21,7 +21,7 @@ cd ./cocoapi/PythonAPI
 pip3 install -v .
 ```
 ## Dataset Information
-We trained the model using the highQ dataset and NewCough Dataset. These two datasets consist of approximately 10-second audio clips, each containing cough sounds collected from hospitals. The audio quality in the highQ dataset is better than that in the NewCough dataset. Sorry for we do not offer the dataset.
+We trained the model using the highQ dataset and NewCough Dataset. These two datasets consist of approximately 10-second audio clips, each containing cough sounds collected from hospitals. The audio quality in the highQ dataset is better than that in the NewCough dataset. The audio in the dataset is in .wav format. Sorry for we do not offer the dataset.
 ```
 -highQ Dataset
 --Train: 1136
@@ -33,7 +33,12 @@ We trained the model using the highQ dataset and NewCough Dataset. These two dat
 --Valid: 486
 --Test: 490 (different from validation)
 ```
-
+## Data Preprocessing
+Step 1. Process the WAV audio files in the dataset, convert them into Mel spectrograms, and generate the corresponding COCO format annotation files.
+`python3 audio2image.py`
+Step 2. 
+Step 3. Divide the dataset into training, testing, and validation sets.
+Division rule: Ensure that audio from the same patient is not assigned to different groups.
 
 ## Mel Spectrogram Dataset Structure
 ```
