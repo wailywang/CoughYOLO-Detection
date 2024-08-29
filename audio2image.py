@@ -132,9 +132,8 @@ def generate_melspectrogram_and_annotation(filePath, savePath, annotations, imag
     return annotations, annotation_id
 
 if __name__ == '__main__':
-    #pls replace this root with your own dataset root
-    data_root = "/home/jovyan/work/MusicYOLO/data4retrain/train/subdir32"
-    melspec_save_path = "/home/jovyan/work/MusicYOLO/mmmel/train32"
+    data_root = "/pls use your own path/data4retrain/train/subdir32"
+    melspec_save_path = "/pls use your own path/mmmel/train32"
     os.makedirs(melspec_save_path, exist_ok=True)
     target_sr = 16000
     allWavFiles = glob.glob(f"{data_root}/*.wav")
@@ -160,6 +159,6 @@ if __name__ == '__main__':
             print(f"Error processing file {wav_filepath}: {e}")
         image_id += 1
 
-    annotations_save_path = "/home/jovyan/work/MusicYOLO/mmmel/32train_annotations.json"
+    annotations_save_path = "/pls use your own path/mmmel/32train_annotations.json"
     with open(annotations_save_path, 'w') as f:
         json.dump(coco_annotations, f, indent=4)
