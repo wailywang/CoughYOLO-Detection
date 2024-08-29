@@ -20,6 +20,19 @@ cd ..
 cd ./cocoapi/PythonAPI
 pip3 install -v .
 ```
+## Dataset Information
+We trained the model using the highQ dataset and NewCough Dataset. Sorry for we do not offer the dataset.
+```
+-highQ Dataset
+--Train: 1136
+--Valid: 200
+--Test: 200 (same as validation)
+
+-NewCough Dataset
+--Train: 2341
+--Valid: 486
+--Test: 490 (different from validation)
+```
 
 ## Mel Spectrogram Dataset Structure
 ```
