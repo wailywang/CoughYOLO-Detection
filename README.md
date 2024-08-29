@@ -21,7 +21,7 @@ cd ./cocoapi/PythonAPI
 pip3 install -v .
 ```
 ## Dataset Information
-We trained the model using the highQ dataset and NewCough Dataset. Sorry for we do not offer the dataset.
+We trained the model using the highQ dataset and NewCough Dataset. These two datasets consist of approximately 10-second audio clips, each containing cough sounds collected from hospitals. The audio quality in the highQ dataset is better than that in the NewCough dataset. Sorry for we do not offer the dataset.
 ```
 -highQ Dataset
 --Train: 1136
@@ -33,6 +33,7 @@ We trained the model using the highQ dataset and NewCough Dataset. Sorry for we 
 --Valid: 486
 --Test: 490 (different from validation)
 ```
+
 
 ## Mel Spectrogram Dataset Structure
 ```
