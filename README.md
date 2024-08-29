@@ -5,7 +5,8 @@ Detection and identification of cough onset points based on [MusicYOLO](https://
 `git clone https://github.com/wailywang/CoughYOLO-Detection.git`
 
 ## Dataset
-```datasets/
+```
+datasets/
 ├── images/
 │   ├── valid/
 │   │   ├── mel1.png
@@ -17,5 +18,6 @@ Detection and identification of cough onset points based on [MusicYOLO](https://
 │   │   └── _annotations.coco.json
 └── tests/
     ├── mel1.png
-    └── _annotations.coco.json```
+    └── _annotations.coco.json
+```
 
