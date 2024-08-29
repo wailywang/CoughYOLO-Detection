@@ -36,9 +36,12 @@ We trained the model using the highQ dataset and NewCough Dataset. These two dat
 ## Data Preprocessing
 Step 1. Process the WAV audio files in the dataset, convert them into Mel spectrograms, and generate the corresponding COCO format annotation files.
 `python3 audio2image.py`
+
 Step 2. 
+
 Step 3. Divide the dataset into training, testing, and validation sets.
 Division rule: Ensure that audio from the same patient is not assigned to different groups.
+`divide_dataset.ipynb`
 
 ## Mel Spectrogram Dataset Structure
 ```
